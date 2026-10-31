@@ -3,7 +3,7 @@
 :root { font-family: Be, sans-serif; color: #51445e; background: #f8f5f1; line-height: 1.6; }
 * { box-sizing: border-box; }
 body { margin: 0; min-width: 320px; }
-button, a { -webkit-tap-highlight-color: transparent; }
+button, a, .scene-canvas canvas { -webkit-tap-highlight-color: transparent; }
 button { font: inherit; cursor: pointer; touch-action: manipulation; }
 button:focus-visible, a:focus-visible { outline: 3px solid #926caa; outline-offset: 4px; }
 .home { --sky-top: #e1dae9; --sky-bottom: #f4e8df; min-height: 100svh; display: grid; align-items: center; padding: max(16px, env(safe-area-inset-top)) max(12px, env(safe-area-inset-right)) max(16px, env(safe-area-inset-bottom)) max(12px, env(safe-area-inset-left)); }

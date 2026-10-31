@@ -18,6 +18,7 @@ try {
     await page.clock.runFor(100);
     return page.locator('.scene-wrap').getAttribute('data-ready', { timeout: 100 }).catch(() => null);
   }).toBe('true');
+  assert.equal(await page.locator('canvas').evaluate(element => getComputedStyle(element).webkitTapHighlightColor), 'rgba(0, 0, 0, 0)', 'No native blue tap highlight on the 3D scene');
   await page.clock.setSystemTime(start);
   await page.evaluate(() => document.dispatchEvent(new Event('visibilitychange')));
   await expect(page.locator('.time-value')).toHaveText(['19', '16', '00', '00']);
